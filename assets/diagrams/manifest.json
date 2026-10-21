@@ -1,0 +1,242 @@
+{
+  "schemaVersion": 1,
+  "sourcePriority": [
+    "--paper-root override when supplied",
+    "ancestor instance.json project: manuscript/iclr2027_CRMbench/salesforce_preprint",
+    "Overleaf export: homepage parent / salesforce_preprint"
+  ],
+  "sourcePolicy": "Use the Salesforce preprint PDFs as the current paper source. The historical Publication/paper diagrams are not replacements for its corrected architecture, Travel, or Marketing figures. All original content and colors are preserved.",
+  "generator": "build_assets.py",
+  "generatorSha256": "e6a43a6135caed840a56e4e906b1e9564b81e21e15387e2e49f9bed9b2499c8f",
+  "pymupdfVersion": "1.28.2",
+  "assets": [
+    {
+      "path": "assets/diagrams/overview.svg",
+      "sourcePath": "manuscript/iclr2027_CRMbench/salesforce_preprint/figures/crm_agent_bench_system_overview_appendix.pdf",
+      "sourceRoot": "writing-project",
+      "sourceSha256": "d1256bd9963f88b6e3f7f3d23db11126a7e685fdf2837363f3d961069b69b7bc",
+      "outputSha256": "884987773a9c4bda76b11eaff8d5222856f210db81618044d933013079c874ef",
+      "method": "PyMuPDF page.get_svg_image(text_as_path=True), single-page vector export",
+      "contentAndColorsPreserved": true,
+      "editableSource": {
+        "sourcePath": "manuscript/iclr2027_CRMbench/salesforce_preprint/figure_sources/crm_agent_bench_system_overview_appendix.html",
+        "sourceRoot": "writing-project",
+        "sourceSha256": "8d566cf121720f8ec2973fcd10ae895446831c1f7fdb3cc426bd1c742e68da1c"
+      }
+    },
+    {
+      "path": "assets/diagrams/interaction.svg",
+      "sourcePath": "manuscript/iclr2027_CRMbench/salesforce_preprint/figures/crm_agent_bench_main_figure.pdf",
+      "sourceRoot": "writing-project",
+      "sourceSha256": "3bdbcfe1d7074ef5f0e99d436282c991546a7c83083c4064c65c33df5abaa7db",
+      "outputSha256": "ab80a9bd4797a6ea95371fc4d7411e4135255b2c6f21a169de081e903dd7e28f",
+      "method": "PyMuPDF page.get_svg_image(text_as_path=True), single-page vector export",
+      "contentAndColorsPreserved": true,
+      "editableSource": {
+        "sourcePath": "Publication/paper/figures/crm_agent_bench_interaction_trajectory_dialogue_main.html",
+        "sourceRoot": "writing-project",
+        "sourceSha256": "6b92b9cba171d349c7838110a7cafa35f729e664db799733fb7488ed1d99fd92"
+      }
+    },
+    {
+      "path": "assets/diagrams/01_retail.svg",
+      "sourcePath": "manuscript/iclr2027_CRMbench/salesforce_preprint/figures/system_flows/01_retail.pdf",
+      "sourceRoot": "writing-project",
+      "sourceSha256": "bce57715454e34a6fa36056f66d196865878176f5c65f2753c7afaad08a76352",
+      "outputSha256": "aacda323f58b9a0eff3f5860bbd68a2df399da4050fabd151b0daf09c18d00aa",
+      "method": "PyMuPDF page.get_svg_image(text_as_path=True), single-page vector export",
+      "contentAndColorsPreserved": true,
+      "editableSource": {
+        "sourcePath": "Publication/paper/system_flows/tikz/01_retail.tex",
+        "sourceRoot": "writing-project",
+        "sourceSha256": "ab0979536ea710aab4e0167aac30cb6964c8cc7a9041e48c1cb1f21f15fcc9d5"
+      }
+    },
+    {
+      "path": "assets/diagrams/02_customer_support.svg",
+      "sourcePath": "manuscript/iclr2027_CRMbench/salesforce_preprint/figures/system_flows/02_customer_support.pdf",
+      "sourceRoot": "writing-project",
+      "sourceSha256": "98229e5a4c88f30050c6faac8f302e191a8b88c365a7b440fe6ac0b93ac7b3f8",
+      "outputSha256": "d3b83bde18c8cf7e06b2d2d3143d88c6d61374f8397b664262109773620d7a44",
+      "method": "PyMuPDF page.get_svg_image(text_as_path=True), single-page vector export",
+      "contentAndColorsPreserved": true,
+      "editableSource": {
+        "sourcePath": "Publication/paper/system_flows/tikz/02_customer_support.tex",
+        "sourceRoot": "writing-project",
+        "sourceSha256": "e3a451800fb1dd8edc3543fb78a4bdf203b119f902f8e10fecf79763d458e6aa"
+      }
+    },
+    {
+      "path": "assets/diagrams/03_field_service.svg",
+      "sourcePath": "manuscript/iclr2027_CRMbench/salesforce_preprint/figures/system_flows/03_field_service.pdf",
+      "sourceRoot": "writing-project",
+      "sourceSha256": "6b9ecc2b3a03c7d0cdff4f0caac65e10cbae47d463a339dcf6edcd57ebb163cb",
+      "outputSha256": "3fd4cbf0143d616731ae2df432209052a08c5bb4944461c952ad181e7debfeb5",
+      "method": "PyMuPDF page.get_svg_image(text_as_path=True), single-page vector export",
+      "contentAndColorsPreserved": true,
+      "editableSource": {
+        "sourcePath": "Publication/paper/system_flows/tikz/03_field_service.tex",
+        "sourceRoot": "writing-project",
+        "sourceSha256": "4962d91428bacc68452a42fce41094499484e7d10f729c5e8a99e880889f810a"
+      }
+    },
+    {
+      "path": "assets/diagrams/04_itsm.svg",
+      "sourcePath": "manuscript/iclr2027_CRMbench/salesforce_preprint/figures/system_flows/04_itsm.pdf",
+      "sourceRoot": "writing-project",
+      "sourceSha256": "195071c37ef6e61e4b27aed5018a9aa304a00676d3865bb5b7c974e3f1636423",
+      "outputSha256": "ac98fd0fa78fd82b364ef9b5f76f9a9756fc60f100d35060a10f18d90c9b4ca4",
+      "method": "PyMuPDF page.get_svg_image(text_as_path=True), single-page vector export",
+      "contentAndColorsPreserved": true,
+      "editableSource": {
+        "sourcePath": "Publication/paper/system_flows/tikz/04_itsm.tex",
+        "sourceRoot": "writing-project",
+        "sourceSha256": "14f33bec8bc72406ca662b3eeb46d028de6ff341bae2513f95b8fdd2504dd011"
+      }
+    },
+    {
+      "path": "assets/diagrams/05_payments.svg",
+      "sourcePath": "manuscript/iclr2027_CRMbench/salesforce_preprint/figures/system_flows/05_payments.pdf",
+      "sourceRoot": "writing-project",
+      "sourceSha256": "6103902c5f55019e39d1304c6862d7fab917dd7c9f43f0ead53dd47f75a7ed75",
+      "outputSha256": "b13a1f085c4296a0b9884cfe74369114e57065d22d01b754c2f943a4a2cb0d1b",
+      "method": "PyMuPDF page.get_svg_image(text_as_path=True), single-page vector export",
+      "contentAndColorsPreserved": true,
+      "editableSource": {
+        "sourcePath": "Publication/paper/system_flows/tikz/05_payments.tex",
+        "sourceRoot": "writing-project",
+        "sourceSha256": "e3749a10088ea8d1466e9cfeb5fea688cdb8a28c9fee7d44f14c9bc1abe69fea"
+      }
+    },
+    {
+      "path": "assets/diagrams/06_travel.svg",
+      "sourcePath": "manuscript/iclr2027_CRMbench/salesforce_preprint/figures/system_flows/06_travel.pdf",
+      "sourceRoot": "writing-project",
+      "sourceSha256": "dabd2760f56bdff12ab152f96704eb52bf1030d1dd4d1eaa1aaebccb5c9ebbde",
+      "outputSha256": "70ac61693cdc2a306190ba2a112d9813f538ef68a46bf2a6b0d10efd28f2f8c5",
+      "method": "PyMuPDF page.get_svg_image(text_as_path=True), single-page vector export",
+      "contentAndColorsPreserved": true,
+      "editableSource": {
+        "sourcePath": "manuscript/iclr2027_CRMbench/salesforce_preprint/figure_sources/system_flows/06_travel.tex",
+        "sourceRoot": "writing-project",
+        "sourceSha256": "e8cf2d026dd55ed3aae8863ebca3e3cd0c85e6abef5ef2ddc2c533a36f55d820"
+      }
+    },
+    {
+      "path": "assets/diagrams/07_onboarding.svg",
+      "sourcePath": "manuscript/iclr2027_CRMbench/salesforce_preprint/figures/system_flows/07_onboarding.pdf",
+      "sourceRoot": "writing-project",
+      "sourceSha256": "72767a0d2cb9a0ff3441807c6c1b34ef38119837b67146befa81f1c521ba2b14",
+      "outputSha256": "bb376e0e7e370d4103cbecf7e02a706eae0a649223eb3c6cf2f67fe0ece77cd2",
+      "method": "PyMuPDF page.get_svg_image(text_as_path=True), single-page vector export",
+      "contentAndColorsPreserved": true,
+      "editableSource": {
+        "sourcePath": "Publication/paper/system_flows/tikz/07_onboarding.tex",
+        "sourceRoot": "writing-project",
+        "sourceSha256": "cc75a1315de598979ba30586ff97df12e7e2ce8ec7986b6417e3140976dfcc10"
+      }
+    },
+    {
+      "path": "assets/diagrams/08_sales.svg",
+      "sourcePath": "manuscript/iclr2027_CRMbench/salesforce_preprint/figures/system_flows/08_sales.pdf",
+      "sourceRoot": "writing-project",
+      "sourceSha256": "7f02d3900a452f50b69fb54656cabc1a9086c8e67f5ba0347cd3b268b5ca214b",
+      "outputSha256": "84dee6e87d414c14f0ae22c9824590708dd2271b207aaa521c3f1a3a3d467588",
+      "method": "PyMuPDF page.get_svg_image(text_as_path=True), single-page vector export",
+      "contentAndColorsPreserved": true,
+      "editableSource": {
+        "sourcePath": "Publication/paper/system_flows/tikz/08_sales.tex",
+        "sourceRoot": "writing-project",
+        "sourceSha256": "43ab05524d993fad436379595b77633032d122bdde66af76a5171aac6ccd2409"
+      }
+    },
+    {
+      "path": "assets/diagrams/09_marketing.svg",
+      "sourcePath": "manuscript/iclr2027_CRMbench/salesforce_preprint/figures/system_flows/09_marketing.pdf",
+      "sourceRoot": "writing-project",
+      "sourceSha256": "1e67c5efc968b7bc2f77ef9113886d1b49b9addcbb854761fec3a87532042b44",
+      "outputSha256": "a9335c7ce055b907c02620571122b86043a57f9365c95b8b76a1711b025f9fbd",
+      "method": "PyMuPDF page.get_svg_image(text_as_path=True), single-page vector export",
+      "contentAndColorsPreserved": true,
+      "editableSource": {
+        "sourcePath": "manuscript/iclr2027_CRMbench/salesforce_preprint/figure_sources/system_flows/09_marketing.tex",
+        "sourceRoot": "writing-project",
+        "sourceSha256": "ce3758a17a04ebe6f5424a925d12d094764fdca12e55cf260ff3a82a5af6d327"
+      }
+    },
+    {
+      "path": "assets/model-logos/gemini.png",
+      "sourcePath": "manuscript/iclr2027_CRMbench/salesforce_preprint/figures/model_logos/gemini.png",
+      "sourceRoot": "writing-project",
+      "sourceSha256": "5cdec4a494ffae48e729b7ea0fbd0cbd261d92a11035a6653e66b09c1aeceeeb",
+      "outputSha256": "5cdec4a494ffae48e729b7ea0fbd0cbd261d92a11035a6653e66b09c1aeceeeb",
+      "method": "Unmodified copy"
+    },
+    {
+      "path": "assets/model-logos/claude.png",
+      "sourcePath": "manuscript/iclr2027_CRMbench/salesforce_preprint/figures/model_logos/claude.png",
+      "sourceRoot": "writing-project",
+      "sourceSha256": "716eb551b55b10d4be76ce3b5607b226f9c784f2ae71675ffd2935cf1cecb603",
+      "outputSha256": "716eb551b55b10d4be76ce3b5607b226f9c784f2ae71675ffd2935cf1cecb603",
+      "method": "Unmodified copy"
+    },
+    {
+      "path": "assets/model-logos/openai.png",
+      "sourcePath": "manuscript/iclr2027_CRMbench/salesforce_preprint/figures/model_logos/openai.png",
+      "sourceRoot": "writing-project",
+      "sourceSha256": "469a0c970a73d1d70a9c9a5eb93f846c3b5f831ad10e3c9525c56e5dd23dc2b7",
+      "outputSha256": "469a0c970a73d1d70a9c9a5eb93f846c3b5f831ad10e3c9525c56e5dd23dc2b7",
+      "method": "Unmodified copy"
+    },
+    {
+      "path": "assets/model-logos/inkling.png",
+      "sourcePath": "manuscript/iclr2027_CRMbench/salesforce_preprint/figures/model_logos/inkling.png",
+      "sourceRoot": "writing-project",
+      "sourceSha256": "1913f96adf96b0db678af798067073c5ec8a77cb4ae12ba6e1c5cc4f89c98158",
+      "outputSha256": "1913f96adf96b0db678af798067073c5ec8a77cb4ae12ba6e1c5cc4f89c98158",
+      "method": "Unmodified copy"
+    },
+    {
+      "path": "assets/model-logos/muse.png",
+      "sourcePath": "manuscript/iclr2027_CRMbench/salesforce_preprint/figures/model_logos/muse.png",
+      "sourceRoot": "writing-project",
+      "sourceSha256": "12905739c79092378faf2a9fecb25e8f6a94338832cecbab94e4428c8eb74760",
+      "outputSha256": "12905739c79092378faf2a9fecb25e8f6a94338832cecbab94e4428c8eb74760",
+      "method": "Unmodified copy"
+    },
+    {
+      "path": "assets/model-logos/nemotron.png",
+      "sourcePath": "manuscript/iclr2027_CRMbench/salesforce_preprint/figures/model_logos/nemotron.png",
+      "sourceRoot": "writing-project",
+      "sourceSha256": "b3fcd140a6ab355100cb4582f71d9a540ce52cbcd6e23051079c97b7313f4281",
+      "outputSha256": "b3fcd140a6ab355100cb4582f71d9a540ce52cbcd6e23051079c97b7313f4281",
+      "method": "Unmodified copy"
+    },
+    {
+      "path": "assets/model-logos/SOURCES.md",
+      "sourcePath": "manuscript/iclr2027_CRMbench/salesforce_preprint/figures/model_logos/SOURCES.md",
+      "sourceRoot": "writing-project",
+      "sourceSha256": "0d8cbbcd8b5a3b942b9afd2646aaabcdcd9ae941fc8ff5d568060ab60117da0c",
+      "outputSha256": "0d8cbbcd8b5a3b942b9afd2646aaabcdcd9ae941fc8ff5d568060ab60117da0c",
+      "method": "Unmodified copy"
+    }
+  ],
+  "notices": [
+    {
+      "path": "assets/diagrams/licenses/tabler-icons-v3.48.0/LICENSE",
+      "sourcePath": "Publication/paper/figures/assets/tabler-icons-v3.48.0/LICENSE",
+      "sourceRoot": "writing-project",
+      "sourceSha256": "b740a1d46122672da62833e97f7e7c8a13fa85cbc7445b584b297cc00dde93db",
+      "outputSha256": "b740a1d46122672da62833e97f7e7c8a13fa85cbc7445b584b297cc00dde93db",
+      "method": "Unmodified license notice copy"
+    },
+    {
+      "path": "assets/diagrams/licenses/tabler-icons-v3.48.0/THIRD_PARTY_NOTICES.md",
+      "sourcePath": "Publication/paper/figures/assets/tabler-icons-v3.48.0/THIRD_PARTY_NOTICES.md",
+      "sourceRoot": "writing-project",
+      "sourceSha256": "26e469c060fc9c48438e424c31dad7b6084de55364e36ff173a391728228c18d",
+      "outputSha256": "26e469c060fc9c48438e424c31dad7b6084de55364e36ff173a391728228c18d",
+      "method": "Unmodified license notice copy"
+    }
+  ]
+}

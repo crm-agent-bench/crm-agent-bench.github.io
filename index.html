@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="CRM-Agent-Bench evaluates tool-using agents in stateful enterprise environments through executable task contracts.">
+  <meta name="theme-color" content="#efeee7">
+  <title>CRM-Agent-Bench · Where Agents Meet Business Rules</title>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css">
+  <script defer src="data/results.js"></script>
+  <script defer src="assets/diagrams/catalog.js"></script>
+  <script defer src="app.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header wrap">
+    <a class="wordmark" href="#" aria-label="CRM-Agent-Bench home"><span class="brand-mark" aria-hidden="true">C<span>↗</span></span>CRM-Agent-Bench</a>
+    <nav aria-label="Main navigation">
+      <a href="#benchmark">Benchmark</a><a href="#workflows">Workflows</a><a href="#results">Results</a><a href="#resources">Resources</a>
+    </nav>
+    <a class="header-paper paper-link" href="assets/paper.pdf?v=873e4dd55210" target="_blank" rel="noopener">Paper <span aria-hidden="true">↗</span></a>
+  </header>
+
+  <main id="main">
+    <section class="hero wrap" aria-labelledby="hero-title">
+      <div class="hero-copy">
+        <p class="eyebrow"><span class="small-square" aria-hidden="true"></span> Stateful enterprise agent evaluation</p>
+        <h1 id="hero-title">Where agents meet<br><span>business rules.</span></h1>
+        <p class="hero-description">Multi-turn tasks. Nine business domains. Executable contracts that check what agents say, do, and leave behind.</p>
+        <div class="hero-actions"><a class="button primary" href="#results">Explore the results <span aria-hidden="true">↓</span></a><a class="text-link paper-link" href="assets/paper.pdf?v=873e4dd55210" target="_blank" rel="noopener">Read the paper <span aria-hidden="true">↗</span></a><a class="button secondary code-link" href="https://github.com/salesforce-misc/crm-agent-bench" target="_blank" rel="noopener">GitHub <span aria-hidden="true">↗</span></a></div>
+        <p class="quiet hero-note">A research benchmark for tool-using agents in stateful enterprise environments.</p>
+      </div>
+      <aside class="hero-aside" aria-label="Evaluation at a glance">
+        <p class="eyebrow">The evaluation lens</p>
+        <div class="lens-row"><span>01</span><div><h2>Outcome</h2><p>The required reply and final state.</p></div></div>
+        <div class="lens-row"><span>02</span><div><h2>Trajectory</h2><p>The right actions, arguments, and order.</p></div></div>
+        <div class="lens-row"><span>03</span><div><h2>Policy compliance</h2><p>Forbidden effects and protected records.</p></div></div>
+        <div class="lens-row"><span>04</span><div><h2>Operational viability</h2><p>Latency, token usage, and estimated cost.</p></div></div>
+      </aside>
+    </section>
+
+    <section class="authors wrap" aria-label="Authors and affiliation">
+      <ul class="author-list">
+        <li><span class="author-name">Monojit Banerjee<sup>*</sup></span><a class="author-email" href="mailto:mbanerjee@salesforce.com">mbanerjee@salesforce.com</a></li>
+        <li><span class="author-name">Zhujun Lan<sup>*</sup></span><a class="author-email" href="mailto:zhujun.lan@salesforce.com">zhujun.lan@salesforce.com</a></li>
+        <li><span class="author-name">Defu Cao<sup>*</sup></span><a class="author-email" href="mailto:defu.cao@salesforce.com">defu.cao@salesforce.com</a></li>
+      </ul>
+      <div class="author-details"><p class="author-affiliation">Salesforce, Inc.</p><p class="author-notes"><span><sup>*</sup> Equal contribution</span></p></div>
+    </section>
+
+    <div class="stats wrap" aria-label="Benchmark scale">
+      <div><strong id="stat-tasks">555</strong><span>tasks</span></div><div><strong id="stat-domains">9</strong><span>business domains</span></div><div><strong id="stat-tags">36</strong><span>capability tags</span></div><div><strong id="stat-systems">16</strong><span>evaluated systems</span></div>
+    </div>
+
+    <section class="section wrap" id="benchmark" aria-labelledby="benchmark-title">
+      <div class="section-heading"><p class="eyebrow">01 / The benchmark</p><h2 id="benchmark-title">Business workflows with state.</h2><p>Each task binds a user goal and an initial world to a task-specific executable contract. Trials run against synthetic records and deterministic tools, without a live CRM backend.</p></div>
+      <div class="benchmark-grid">
+        <div class="workflow">
+          <ol class="workflow-list">
+            <li><span class="step">1</span><div><h3>Reset the business world</h3><p>Start with fresh records, domain policies, and the task’s declared initial state.</p></div></li>
+            <li><span class="step">2</span><div><h3>Let the interaction unfold</h3><p>An on-policy simulated user responds to the agent’s visible replies. The reference scaffold routes each turn to scoped tools.</p></div></li>
+            <li><span class="step">3</span><div><h3>Check the executed contract</h3><p>Grade the recorded dialogue, tool trace, and final state. Strict success requires every task-declared check to hold.</p></div></li>
+          </ol>
+          <p class="margin-note">Tasks and their contracts are separate from the reference agent. Latency and cost are reported alongside correctness.</p>
+        </div>
+        <div class="domain-panel"><div class="panel-heading"><h3>Nine domains</h3><span class="quiet">Number of tasks</span></div><div id="domain-list" class="domain-list"></div><p class="micro">Every system faces the same domain task sets.</p></div>
+      </div>
+      <div class="paper-figure-block" id="benchmark-figures">
+        <div class="figure-heading"><div><p class="eyebrow">Inside the benchmark</p><h3>From a task contract to an executed verdict.</h3></div><div class="segmented" role="group" aria-label="Benchmark diagram"><button type="button" data-overview="interaction" aria-pressed="true">Multi-turn example</button><button type="button" data-overview="overview" aria-pressed="false">Evaluation flow</button></div></div>
+        <figure class="paper-figure"><div class="diagram-viewport" tabindex="0" role="region" aria-label="Benchmark flow diagram"><img id="benchmark-diagram" src="assets/diagrams/interaction.svg" width="1350" height="780" loading="lazy" decoding="async" alt="Multi-turn funds transfer: the initial amount fails validation, then a corrected request is validated, executed, and confirmed."></div><figcaption><p id="benchmark-diagram-caption">An anonymized funds-transfer example: a $1,000 request fails validation without moving funds; after the user corrects the amount to $50, the agent validates, executes, and confirms the transfer.</p><a id="benchmark-diagram-link" class="text-link" href="assets/diagrams/interaction.svg" target="_blank" rel="noopener">View full-size SVG <span aria-hidden="true">↗</span></a></figcaption></figure>
+      </div>
+    </section>
+
+    <section class="example-section" aria-labelledby="example-title">
+      <div class="wrap example-grid">
+        <div class="example-copy"><p class="eyebrow">02 / A closer look</p><h2 id="example-title">A correct reply can hide<br>a duplicated transaction.</h2><p>A $15.50 checkout should award 155 loyalty points once. In an observed trace, the agent repeats the checkout and leaves 310 points, while reporting 155.</p><p class="quiet">Compare the expected behavior with the observed duplicate. Only the declared state check catches the doubled balance.</p><a class="text-link paper-link" href="assets/paper.pdf?v=873e4dd55210" target="_blank" rel="noopener">See the trace in the paper <span aria-hidden="true">↗</span></a></div>
+        <div class="checkout-demo">
+          <div class="demo-top"><span class="eyebrow">Checkout contract</span><div class="segmented compact" role="group" aria-label="Checkout example"><button type="button" data-checkout="expected" aria-pressed="false">Expected</button><button type="button" data-checkout="duplicate" aria-pressed="true">Observed duplicate</button></div></div>
+          <div class="transaction"><div><span class="micro">Agent’s reply</span><p>“You earned 155 loyalty points.”</p></div><span class="receipt-value">$15.50</span></div>
+          <div class="state-comparison"><div><span class="micro">Expected balance</span><strong>155 <small>pts</small></strong></div><span class="state-divider" aria-hidden="true">→</span><div><span class="micro">Final balance</span><strong id="final-balance">310 <small>pts</small></strong></div></div>
+          <div class="checks"><div><span>Response</span><span class="verdict pass">Pass</span></div><div><span>Required actions</span><span class="verdict pass">Pass</span></div><div><span>Order</span><span class="verdict pass">Pass</span></div><div><span>State</span><span id="state-verdict" class="verdict fail">Fail</span></div></div>
+          <div class="strict-verdict"><span>Strict contract</span><strong id="strict-verdict" class="fail-text">Not satisfied</strong></div><p class="micro demo-status" id="demo-status" aria-live="polite">Observed duplicate: two checkouts, twice the loyalty credit.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section wrap workflow-section" id="workflows" aria-labelledby="workflow-title">
+      <div class="workflow-heading"><div class="section-heading"><p class="eyebrow">03 / Domain workflows</p><h2 id="workflow-title">Follow a business workflow.</h2><p>Explore the paper’s reference-agent diagrams, from a user request through scoped tools, business-state changes, policy gates, and declared evaluation checks.</p></div><div class="workflow-selector"><label for="workflow-domain">Choose a domain</label><select id="workflow-domain" aria-label="Business workflow domain"><option value="payments">Payments</option></select></div></div>
+      <figure class="paper-figure domain-figure"><div class="domain-figure-heading"><h3 id="workflow-name">Payments</h3><div class="workflow-navigation"><button type="button" id="previous-workflow" aria-label="Previous domain workflow">←</button><span id="workflow-counter" class="micro">5 / 9</span><button type="button" id="next-workflow" aria-label="Next domain workflow">→</button></div></div><div class="diagram-viewport domain-diagram-viewport" tabindex="0" role="region" aria-label="Selected domain workflow diagram"><img id="workflow-diagram" src="assets/diagrams/05_payments.svg" loading="lazy" decoding="async" alt="Payments workflow showing checkout tools, business-policy gates, state changes, and evaluation."></div><figcaption><div><p id="workflow-caption">A representative payment journey in the reference scaffold.</p><p class="figure-scope">Each diagram illustrates one journey. Tool lists span the turns shown; evaluation checks apply when declared by the task contract.</p></div><a id="workflow-diagram-link" class="text-link" href="assets/diagrams/05_payments.svg" target="_blank" rel="noopener">View full-size SVG <span aria-hidden="true">↗</span></a></figcaption></figure>
+      <p class="diagram-help micro">On a narrow screen, scroll within the diagram to inspect its labels, or open the full-size SVG.</p>
+    </section>
+
+    <section class="section wrap" id="results" aria-labelledby="results-title">
+      <div class="results-heading"><div class="section-heading"><p class="eyebrow">04 / Results</p><h2 id="results-title">One benchmark. Different strengths.</h2><p>Explore the official first-round leaderboard and the two additional executions. The mean gives each round equal weight.</p></div><button class="button secondary small" id="open-data-tools" type="button">Update results <span aria-hidden="true">↗</span></button></div>
+      <div class="result-controls"><div class="segmented" id="round-controls" role="group" aria-label="Result view"><button type="button" data-view="1" aria-pressed="true">Round 1 <span class="official-tag">Official</span></button><button type="button" data-view="2" aria-pressed="false">Round 2</button><button type="button" data-view="3" aria-pressed="false">Round 3</button><button type="button" data-view="mean" aria-pressed="false">Three-round mean</button></div><div class="filters"><label class="search"><span class="sr-only">Search models</span><input id="model-search" type="search" placeholder="Search models" autocomplete="off"></label><label><span class="sr-only">Model family</span><select id="family-filter"><option value="all">All families</option></select></label></div></div>
+      <div class="result-meta"><p id="view-description">Round 1 is the paper’s official full-suite leaderboard. Values report strict-success percentages.</p><span id="data-badge" class="data-badge">Published snapshot</span></div>
+      <div class="table-scroll" role="region" aria-label="Model results" tabindex="0"><table class="leaderboard"><caption class="sr-only" id="table-caption">Official first-round strict success across sixteen systems.</caption><thead id="results-head"></thead><tbody id="results-body"></tbody></table></div>
+      <div class="table-footer"><span id="result-count" aria-live="polite">16 systems</span><span id="snapshot-date">Data snapshot · October 20, 2026</span></div>
+      <p class="table-note" id="result-footnote">Cost and latency describe the first round. Cost is estimated tested-agent cost for the full suite; “n/a” denotes an unmetered self-hosted run.</p>
+      <details class="method-note"><summary>How to read these scores</summary><div><p><strong>Strict success</strong> is the conjunction of the checks declared by each task. It measures the complete evaluated agent system.</p><p><strong>Three-round mean</strong> averages the three round-level success rates. Sample standard deviation is in percentage points. <strong>All-three success</strong> is the percentage of tasks that succeed in all three executions, restricted to tasks eligible for evaluation in every round.</p><p>Success rates use tasks with an eligible verdict; unavailable verdicts are excluded.</p></div></details>
+      <div class="findings"><div><p class="eyebrow">Across executions</p><h3>Order can persist.<br>Task outcomes still change.</h3><p>Across the three reported rounds, pairwise rank correlations range from <strong>0.869 to 0.934</strong>.</p></div><div><p>Gemini 3.8 Flash reaches <strong>86.49% strict success</strong> in both rounds 2 and 3, while <strong>5.41% of task outcomes switch</strong> between those executions. Its <strong>all-three success is 78.20%</strong>.</p><p class="quiet">These findings describe the published paper snapshot. Imported data changes the table preview, not the paper’s reported conclusions.</p></div></div>
+    </section>
+
+    <section class="section wrap domain-results-section" id="domain-results" aria-labelledby="domain-results-title">
+      <div class="section-heading"><p class="eyebrow">05 / Results by domain</p><h2 id="domain-results-title">Domain success across three rounds.</h2><p>Each cell is the equal-weight mean of the three round-level strict-success percentages within a business domain. Model search and family filters above also apply here; domain values remain three-round means.</p></div>
+      <div class="domain-results-meta"><p class="micro">The same model order as the leaderboard above.</p><div class="heatmap-legend" aria-label="Color scale: lower to higher success"><span>Lower</span><span class="heatmap-legend-scale" aria-hidden="true"></span><span>Higher</span></div></div>
+      <div class="table-scroll domain-table-scroll" role="region" aria-label="Three-round mean strict success by model and domain" tabindex="0"><table class="domain-heatmap"><caption class="sr-only">Three-round mean strict-success percentages by model and business domain.</caption><thead id="domain-results-head"></thead><tbody id="domain-results-body"></tbody></table></div>
+      <p class="table-note">Values are percentages. On a narrow screen, scroll horizontally to compare domains.</p>
+    </section>
+
+    <section class="resources-section" id="resources" aria-labelledby="resources-title"><div class="wrap"><div class="section-heading"><p class="eyebrow">06 / Resources</p><h2 id="resources-title">Read, inspect, and build on the benchmark.</h2></div><div class="resource-grid"><a class="resource paper-link" href="assets/paper.pdf?v=873e4dd55210" target="_blank" rel="noopener"><span class="resource-kicker">Research preprint <span aria-hidden="true">↗</span></span><h3>The paper</h3><p id="paper-title">CRM-Agent-Bench: Benchmarking Tool-Using Agents in Stateful Enterprise Environments</p></a><div class="resource code-resource"><span class="resource-kicker">Code &amp; benchmark</span><h3 id="code-title">Code &amp; benchmark</h3><p id="code-description">Access the benchmark, task definitions, tools, and evaluation code.</p><a id="code-link" class="text-link" href="https://github.com/salesforce-misc/crm-agent-bench" target="_blank" rel="noopener">Open repository <span aria-hidden="true">↗</span></a></div></div></div></section>
+  </main>
+
+  <footer class="wrap site-footer"><div><a class="wordmark" href="#">CRM-Agent-Bench</a><p>Where agents meet business rules.</p></div><div class="footer-controls"><span class="micro">Page background</span><div class="segmented compact" role="group" aria-label="Page background"><button type="button" data-theme="warm" aria-pressed="true">Warm gray</button><button type="button" data-theme="gray" aria-pressed="false">Gray</button></div><a class="text-link" href="#main">Back to top ↑</a></div></footer>
+
+  <dialog id="data-dialog" aria-labelledby="data-dialog-title"><div class="dialog-header"><div><p class="eyebrow">Results data</p><h2 id="data-dialog-title">Update the table.</h2></div><button id="close-data-tools" class="icon-button" type="button" aria-label="Close update results dialog">×</button></div><p>Load a results JSON file to preview new scores in this tab. Reloading restores the published data.</p><label class="file-drop" for="results-file"><strong>Choose a results JSON file</strong><span>Use the same format as the page’s published results data.</span><input id="results-file" type="file" accept=".json,application/json"></label><p class="dialog-note">Imports do not publish results. To update the hosted page, replace <code>data/results.json</code>; it is read on reload. Regenerate the bundled JS too if you distribute the page for offline use.</p><div class="dialog-actions"><button class="button secondary small" id="refresh-results" type="button">Refresh published data</button><button class="text-button" id="restore-results" type="button">Restore published snapshot</button></div><p id="data-message" class="data-message" role="status" aria-live="polite"></p></dialog>
+  <noscript><div class="noscript wrap">Enable JavaScript to explore the interactive results. You can still <a href="assets/paper.pdf?v=873e4dd55210">read the paper</a> or <a href="https://github.com/salesforce-misc/crm-agent-bench">explore the benchmark code</a>.</div></noscript>
+</body>
+</html>
